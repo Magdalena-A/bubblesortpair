@@ -1,25 +1,34 @@
 function bubbleSort(array) {
-  function swap(a, b) {
-    // value at a particular index
-  }
-  // function compare(a, b) {
-  //   console.log('bye');
+  // function swap(a, b) {
+  //   // value at a particular index
   // }
+
   if (array.length <= 1) return array;
-  for (let i = 0; i < array.length - 1; i++) {
-    // foo
-    compare(array[i], array[i + 1]);
+  
+  //
+  for (let j = array.length; j > 0; j--) {
+    let sorted = false;
+    for (let i = 0; i < j - 1; i++) {
+      // foo
+      compare(array, i, array[i], array[i + 1]);
+    }
   }
+
+  return array;
 }
 
-// function swap(a, b) {
-//   return 'hi';
-// }
-function compare(a, b) {
-  console.log('bye');
+function compare(array, i, a, b) {
+  if (a > b) {
+    swap(array, i, a, b);
+  }
+  console.log("compared!");
 }
-// bubbleSort.compare = function(a, b) {
-//   console.log('bye');
-// };
 
-bubbleSort([1, 2, 3, 4, 5, 6, 7]);
+function swap(array, i, a, b, sorted) {
+  //sorted = true;
+  array[i] = b;
+  array[i+1] = a;
+  console.log("swapped!");
+}
+
+console.log(bubbleSort([1, 2, 3, 4, 5, 6, 7]));
