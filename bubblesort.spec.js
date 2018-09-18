@@ -25,7 +25,7 @@ describe('Bubble Sort', function() {
     expect(bubbleSort([3, 1, 2])).toEqual([1, 2, 3]);
   });
 
-  it('sorts an array [1,2,3] and swaps 0 times and compares 3 times', function() {
+  it('sorts an array [1,2,3] and swaps 0 times (and compares 3 times for non optimized algorithm)', function() {
     bubbleSort([1, 2, 3]);
     expect(window.swap.calls.count()).toEqual(0);
     //expect(window.compare.calls.count()).toEqual(3); // for non optimized algorithm
